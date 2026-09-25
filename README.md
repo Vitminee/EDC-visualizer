@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a static-exported Next.js energy sharing visualizer that can be deployed to GitHub Pages.
+
+## GitHub Pages
+
+The repository includes an Actions workflow at `.github/workflows/deploy-pages.yml`. Push to `main`, then enable GitHub Pages in the repository settings with **GitHub Actions** as the source.
+
+For a manual deploy, set the repository name when it is different from `edc`, then run:
+
+```powershell
+$env:NEXT_PUBLIC_REPO_NAME = "your-repository-name"
+npm run deploy
+```
+
+The static site is generated in `out/` and published to the `gh-pages` branch.
 
 ## Getting Started
 
