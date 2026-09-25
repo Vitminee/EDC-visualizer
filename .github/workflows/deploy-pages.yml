@@ -27,6 +27,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Build static export
         env:
           NEXT_PUBLIC_REPO_NAME: ${{ github.event.repository.name }}
